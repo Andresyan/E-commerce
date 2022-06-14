@@ -1,0 +1,69 @@
+.card {
+    width: 18rem;
+}
+*{
+    font-family:'Yantramanav';
+}
+.orange-color{
+    color:#F85555;
+}
+.card img{
+    width: 200px;
+    height: 180px;
+}
+li img{
+    width: 40px;
+    height: 40px;
+}
+.btn-danger{
+    background-color: #F85555;
+}
+.help-img img{
+    width: 30px;
+    height: 40px;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+p{
+    color: black;
+}
+/*
+.helper-size{
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+.helper-size i{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}*/
+.boton-eliminar {
+    background-color: white;
+    color: red;
+    border: none;
+    font-size: 20px;
+}
+
+.boton-eliminar:hover {
+    cursor: pointer;
+}
+.boton-eliminar:focus {
+    outline: none;
+}
+.helperImg img{
+    width: 120px;
+    height: 90px;
+}
+footer{
+    margin-top: 3rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    border: rgb(24, 22, 22);
+    background-color: #F85555;
+}

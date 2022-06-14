@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<t>, initial-scale=1.0">
+      <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Yantramanav&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul class="nav d-flex">
+            <li class="nav-item col-6 border">
+              <a class="nav-link  fs-1 fw-bold orange-color"  href="#">e-commerce</a>
+            </li>
+            <li class="nav-item col-2 border">
+              <a class="nav-link text-center" href="#"><img src="./images/user 2.svg" alt=""></a>
+            </li>
+            <li class="nav-item col-2 border">
+              <a class="nav-link text-center" href="#"><img src="./images/heart 1.svg" alt=""></a>
+            </li>
+            <li class="nav-item col-2 border">
+              <a class="nav-link active text-center" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="generateShoppingList()" href="#"><img src="./images/shopping-cart 3.svg" alt=""></a>
+            </li>
+          </ul>
+    </nav>
+    <div class="container mt-5">
+        <div class="row justify-content-end">
+            <div class="col-6 d-flex align-items-end">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="generateShoppingList()">
+                    Ver carrito
+                  </button>      
+            </div>
+            <div class="col-6">
+                <form action="/create.html" onsubmit="event.preventDefault(), FilterName()">
+                <!--////// -->
+                    <div>
+                        <label for="exampleInputEmail1" class="form-label">Buscador Marca</label>
+                      </div>
+                    <div class="d-flex">
+                      <input id="brand-filter" type="text" class="form-control me-3" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <button type="submit" class="btn btn-danger">Buscar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                <div class="modal-body" id="modal-shopping-cart">
+                </div>
+                <div class="modal-footer">
+                  <p class="fw-bold">Precio total: $<span id="precioTotal">0</span></p>
+                  <button type="button" class="btn btn-danger" id="vaciar-carrito">Comprar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="row mt-5" id="phones-container">
+            
+        </div>
+    </div>
+    <footer>Hecho con ♥ en Academlo</footer>
+    <script src="./js/script.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
