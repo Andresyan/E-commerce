@@ -67,3 +67,17 @@ footer{
     border: rgb(24, 22, 22);
     background-color: #F85555;
 }
+.helper-x{
+    height: 70px;
+}
+.helper-ok{
+    height: 70px;
+}
+.fa-circle-check{
+    color: rgb(130, 206, 17);
+    font-size: 60px;
+}
+.fa-circle-xmark{
+    color: #F85555;
+    font-size: 60px;
+}

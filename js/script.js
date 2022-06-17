@@ -8,9 +8,36 @@ import { filter, find } from './filters.js';
 
 const deleteButton = document.getElementById('vaciar-carrito')
 deleteButton.addEventListener('click',() => {
+    let aux = shoppingCart.length;
     shoppingCart.length = 0;
     localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
     generateShoppingList();
+    if(aux>0){
+    let htm = `<div class="helper-ok">
+                <div class="position-relative">
+                <i class="fa-solid fa-circle-check position-absolute top-0 start-50 translate-middle-x"></i>
+                </div>
+                </div>
+                <div class="mt-1">
+                <p class="text-center fw-bold fs-3">Gracias por su compra</p>
+                </div>
+                `
+    let containe = document.getElementById('modal-shopping-cart');
+    containe.innerHTML = htm;
+    }else{
+        let htmr = `<div class="helper-x">
+        <div class="position-relative">
+        <i class="fa-solid fa-circle-xmark position-absolute top-0 start-50 translate-middle-x"></i>
+        </div>
+        </div>
+        <div class="mt-1">
+        <p class="text-center fw-bold fs-3">Elige un producto</p>
+        </div>
+        
+        `
+    let containes = document.getElementById('modal-shopping-cart');
+    containes.innerHTML = htmr;
+    }
 })
 
 const priceTot = document.getElementById('precioTotal')
